@@ -12,7 +12,7 @@
 display.setStatusBar(display.HiddenStatusBar)
 
 -- local variables to this entire file
-local scrollSpeed = 3
+
 
 -- background image with width and height
 local backgroundImage = display.newImageRect("./assets/textures/background.png", 2048, 1536)
@@ -28,9 +28,8 @@ snowman.ID = "snowman"
 
 local function MoveImage(event)
 	-- add the scroll speed to the x-value of the image
-    snowman.x = snowman.x + scrollSpeed
+    
     print( display.fps )  -- note this displays how fast the current refresh is
 end
 
--- MoveShip will be called at program start over and over (60 frames or times per second)
-Runtime:addEventListener("enterFrame", MoveImage)
+-- MoveSnowman will be called at program start over and over (60 frames or times per second)
